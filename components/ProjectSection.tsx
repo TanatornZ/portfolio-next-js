@@ -1,16 +1,18 @@
 "use client";
-
 import { projectList } from "@/constants/projectList";
 import Image from "next/image";
 import React from "react";
+import Section from "./Section";
 
 type Props = {};
 
 function ProjectSection({}: Props) {
   return (
-    <div className="w-full bg-slate-50 p-4 md:p-8">
+    <Section className="bg-slate-50">
       <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center">
-        <h1 className="text-3xl font-semibold text-center">Project</h1>
+        <h1 className="text-4xl font-bold text-center text-slate-800">
+          Project
+        </h1>
         <div className="mt-4 md:mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3 w-full">
           {projectList.map((project) => (
             <div
@@ -27,7 +29,7 @@ function ProjectSection({}: Props) {
                 className="rounded-lg"
                 style={{ objectFit: "cover" }}
               ></Image>
-              <div className="absolute hidden bottom-0 group-hover:block w-full h-1/3 bg-slate-300 rounded-b-lg p-2 text-black opacity-100">
+              <div className="absolute hidden bottom-0 group-hover:block w-full h-1/3 bg-slate-300 rounded-b-lg p-2 md:p-4 text-black opacity-100">
                 <h3 className="text-lg font-bold">{project.title}</h3>
                 <p className="line-clamp-2">{project.description}</p>
               </div>
@@ -35,7 +37,7 @@ function ProjectSection({}: Props) {
           ))}
         </div>
         <button
-          className="py-3 px-4 rounded-md al bg-blue-600 hover:bg-blue-500 mt-4 font-semibold text-white"
+          className="py-3 px-4 rounded-md al bg-blue-400 hover:bg-blue-500 mt-4 font-semibold text-white"
           onClick={() => {
             window.open("https://github.com/TanatornZ");
           }}
@@ -43,7 +45,7 @@ function ProjectSection({}: Props) {
           More Project
         </button>
       </div>
-    </div>
+    </Section>
   );
 }
 
