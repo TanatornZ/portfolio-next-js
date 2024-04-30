@@ -3,12 +3,13 @@ import Image from "next/image";
 import React from "react";
 import profile from "../app/profile.jpg";
 import BalloonElement from "./BalloonElement";
+import Section from "./Section";
 
 type Props = {};
 
 function HomeSection({}: Props) {
   return (
-    <section className="h-dvh w-screen bg-white relative">
+    <Section className="h-dvh">
       <div className="flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-5 z-50">
         <div className="size-52 rounded-full relative shadow-lg">
           <Image
@@ -39,7 +40,7 @@ function HomeSection({}: Props) {
             />
           );
         })}
-    </section>
+    </Section>
   );
 }
 
