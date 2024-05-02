@@ -37,7 +37,7 @@ function ProjectSection({}: Props) {
           ))}
         </div>
         <button
-          className="py-3 px-4 rounded-md al bg-blue-400 hover:bg-blue-500 mt-4 font-semibold text-white"
+          className="py-3 px-4 rounded-md al bg-blue-400 hover:bg-blue-500 mt-4 font-semibold text-white hover:rounded-tl-custom hover:rounded-br-custom"
           onClick={() => {
             window.open("https://github.com/TanatornZ");
           }}
