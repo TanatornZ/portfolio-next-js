@@ -21,10 +21,12 @@ function HomeSection({}: Props) {
           ></Image>
         </div>
         <div className="flex flex-col justify-center items-center rounded-lg p-3 md:p-4 gap-2 backdrop-blur-md bg-slate-200/30 shadow-lg">
-          <h1 className="text-slate-900 font-semibold text-2xl md:text-3xl">
+          <h1 className="text-slate-900 font-semibold md:text-3xl">
             Tanatorn Intaphong
           </h1>
-          <p className="text-slate-600 text-lg">Website Developer</p>
+          <p className="text-slate-600 text-sm md:text-lg">
+            Front-end Developer
+          </p>
         </div>
       </div>
       {balloonElementList &&
