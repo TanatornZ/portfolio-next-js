@@ -1,6 +1,6 @@
-import halloween from "../app/halloween.png";
-import NFT from "../app/NFT.png";
-import calculator from "../app/calculator.png";
+import halloween from "@assets/image/projects/halloween.png";
+import NFT from "@assets/image/projects/NFT.png";
+import calculator from "@assets/image/projects/calculator.png";
 import { StaticImageData } from "next/image";
 
 type IProjectList = {

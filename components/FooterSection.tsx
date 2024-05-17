@@ -10,7 +10,7 @@ type Props = {};
 
 function FooterSection({}: Props) {
   return (
-    <Section className="bg-blue-100">
+    <Section className="bg-blue-50">
       <div className="w-full max-w-6xl mx-auto">
         <div className=" flex items-center justify-between">
           <div>
