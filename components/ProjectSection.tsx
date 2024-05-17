@@ -17,7 +17,7 @@ function ProjectSection({}: Props) {
           {projectList.map((project) => (
             <div
               key={project.id}
-              className="h-[280px] lg:h-[340px] rounded-lg w-full bg-slate-400 relative hover:opacity-70 group cursor-pointer"
+              className="h-[280px] lg:h-[340px] rounded-lg w-full bg-slate-400 relative hover:opacity-90 group cursor-pointer overflow-hidden"
               onClick={() => {
                 window.open(project.url);
               }}
@@ -29,7 +29,7 @@ function ProjectSection({}: Props) {
                 className="rounded-lg"
                 style={{ objectFit: "cover" }}
               ></Image>
-              <div className="absolute hidden bottom-0 group-hover:block w-full h-1/3 bg-slate-300 rounded-b-lg p-2 md:p-4 text-black opacity-100">
+              <div className="absolute translate-y-28 bottom-0 group-hover:translate-y-0 w-full h-1/3 bg-slate-300 rounded-b-lg p-2 md:p-4 text-black opacity-100 transition-all duration-500">
                 <h3 className="text-lg font-bold">{project.title}</h3>
                 <p className="line-clamp-2">{project.description}</p>
               </div>
@@ -37,7 +37,7 @@ function ProjectSection({}: Props) {
           ))}
         </div>
         <button
-          className="py-3 px-4 rounded-md al bg-blue-400 hover:bg-blue-500 mt-4 font-semibold text-white hover:rounded-tl-custom hover:rounded-br-custom"
+          className="py-3 px-4 rounded-md al bg-blue-500 hover:bg-blue-600 mt-4 font-semibold text-white hover:rounded-tl-[24px] hover:rounded-br-[24px] transition-all"
           onClick={() => {
             window.open("https://github.com/TanatornZ");
           }}

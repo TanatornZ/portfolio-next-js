@@ -27,3 +27,66 @@ body {
     transform: translateY(-100px);
   }
 }
+
+.test_animation {
+  animation-name: wrap;
+  animation-duration: 2s;
+  /* animation-delay: 2s; */
+  opacity: 0;
+}
+
+@keyframes wrap {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.animation-slide-in {
+  animation-name: fadeSlideIn;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  opacity: 1;
+  right: 0;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    right: -300px;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+.animation-slide-to-top {
+  animation-name: fadeSlideToTop;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  opacity: 1;
+  right: 10%;
+  bottom: -200px;
+}
+
+@keyframes fadeSlideToTop {
+  0% {
+    opacity: 0;
+    bottom: -300px;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
