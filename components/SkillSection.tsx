@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Chart } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -13,7 +13,6 @@ import {
   Title,
   Tooltip,
   BarElement,
-  ChartOptions,
 } from "chart.js";
 import { cx } from "@emotion/css";
 import flutter from "@assets/icons/flutter.webp";
@@ -36,47 +35,6 @@ function SkillSection({}: Props) {
     BarElement
   );
 
-  const options: ChartOptions = {
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          label: function (this, chart) {
-            const value = chart.formattedValue as unknown as number;
-            switch (Number(value)) {
-              case 1:
-                return "Beginner";
-              case 2:
-                return "Average";
-              case 3:
-                return "Cool Guy";
-              case 4:
-                return "Rock star";
-            }
-          },
-        },
-      },
-    },
-    scales: {
-      y: {
-        ticks: {
-          callback: function (value) {
-            switch (value) {
-              case 1:
-                return "Beginner";
-              case 2:
-                return "Average";
-              case 3:
-                return "Cool Guy";
-              case 4:
-                return "Rock star";
-            }
-          },
-        },
-      },
-    },
-  };
-
   const otherSkills: { name: string; image: StaticImageData }[] = [
     { name: "Nest Js", image: nestJs },
     { name: "Mongo DB", image: mongoDB },
@@ -89,9 +47,49 @@ function SkillSection({}: Props) {
         Main Skill
       </h1>
       <div className="w-full p-4 py-8 xl:pt-16">
-        <Chart
-          type={"bar"}
-          options={options}
+        <Bar
+          options={{
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function (this, chart) {
+                    const value = chart.formattedValue as unknown as number;
+                    switch (Number(value)) {
+                      case 1:
+                        return "Beginner";
+                      case 2:
+                        return "Average";
+                      case 3:
+                        return "Cool Guy";
+                      case 4:
+                        return "Rock star";
+                    }
+                  },
+                },
+              },
+            },
+            scales: {
+              y: {
+                ticks: {
+                  callback: function (value) {
+                    switch (value) {
+                      case 1:
+                        return "Beginner 🐣";
+                      case 2:
+                        return "Average 😁";
+                      case 3:
+                        return "Cool Guy 😎";
+                      case 4:
+                        return "Rock star 🤘🏻";
+                    }
+                  },
+                  color: "rgba(24, 24, 24, 0.8)",
+                  font: { size: 16, weight: "bold" },
+                },
+              },
+            },
+          }}
           data={{
             labels: ["HTML", "CSS", "JS", "TS", "ReactJs", "NextJs"],
             datasets: [
@@ -99,14 +97,14 @@ function SkillSection({}: Props) {
                 data: [2, 2, 3, 3, 4, 3],
                 borderWidth: 1,
                 backgroundColor: [
-                  "rgba(252,73,10,0.8)",
-                  "rgba(33,150,243,0.8)",
-                  "rgba(254,223,0,0.8)",
-                  "rgba(48,120,198,0.8)",
-                  "rgba(90,218,253,0.8)",
+                  "rgba(252,73,10,0.9)",
+                  "rgba(33,150,243,0.9)",
+                  "rgba(254,223,0,0.9)",
+                  "rgba(48,120,198,0.9)",
+                  "rgba(90,218,253,0.9)",
                   "rgba(0,0,0,0.8)",
                 ],
-                borderRadius: 4,
+                borderRadius: 8,
               },
             ],
           }}
