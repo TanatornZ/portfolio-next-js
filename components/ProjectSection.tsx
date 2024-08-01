@@ -1,4 +1,5 @@
 "use client";
+
 import { projectList } from "@/constants/projectList";
 import Image from "next/image";
 import React from "react";
@@ -9,11 +10,11 @@ type Props = {};
 function ProjectSection({}: Props) {
   return (
     <Section className="bg-slate-50">
-      <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center">
+      <div className="w-full max-w-6xl mx-auto py-8 md:py-12 lg:py-20  flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold text-center text-slate-800">
           Project
         </h1>
-        <div className="mt-4 md:mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3 w-full">
+        <div className="mt-4 md:mt-8 grid gap-3 md:gap-6 md:grid-cols-2 lg:grid-cols-3 w-full">
           {projectList.map((project) => (
             <div
               key={project.id}

@@ -42,7 +42,7 @@ function SkillSection({}: Props) {
   ];
 
   return (
-    <div className="w-full max-w-6xl mx-auto flex flex-col py-8 md:py-12 justify-center items-center">
+    <div className="w-full max-w-6xl mx-auto flex flex-col py-8 md:py-12 lg:py-20 justify-center items-center">
       <h1 className="text-4xl font-bold text-center text-slate-800">
         Main Skill
       </h1>
