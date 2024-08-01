@@ -10,6 +10,7 @@ function BalloonElement({
   top = 0,
   bottom = 0,
   zIndex = 0,
+  className,
 }: IBalloonElement) {
   return (
     <div
@@ -22,7 +23,7 @@ function BalloonElement({
         bottom: bottom != 0 ? `${bottom}%` : "",
         zIndex: zIndex != 0 ? `${zIndex}` : "",
       }}
-      className={cx("rounded-full move-up-down-animation absolute", color)}
+      className={cx("rounded-full absolute", color, className)}
     ></div>
   );
 }
