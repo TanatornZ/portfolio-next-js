@@ -7,7 +7,9 @@ type Props = {
 };
 
 function Section({ children, className }: Props) {
-  return <div className={cx("w-full p-4 md:p-8", className)}>{children}</div>;
+  return (
+    <div className={cx("w-full p-4 py-12 md:p-16", className)}>{children}</div>
+  );
 }
 
 export default Section;
