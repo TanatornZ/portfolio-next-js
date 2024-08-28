@@ -18,7 +18,7 @@ function ContactSection() {
       <div className="w-full max-w-6xl mx-auto">
         <div className="">
           <h1 className="text-center text-2xl md:text-4xl font-semibold">
-            Let's Work Together
+            Let&apos;s Work Together
           </h1>
 
           <div className="lg:flex lg:justify-between lg:gap-8 mt-4 md:mt-8">
