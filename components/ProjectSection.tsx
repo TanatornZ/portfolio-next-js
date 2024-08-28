@@ -5,12 +5,10 @@ import Image from "next/image";
 import React from "react";
 import Section from "./Section";
 
-type Props = {};
-
-function ProjectSection({}: Props) {
+function ProjectSection() {
   return (
     <Section className="bg-slate-50">
-      <div className="w-full max-w-6xl mx-auto py-8 md:py-12 lg:py-20  flex flex-col justify-center items-center">
+      <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold text-center text-slate-800">
           Project
         </h1>
