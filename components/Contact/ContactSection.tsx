@@ -11,8 +11,6 @@ function ContactSection() {
   const { formData, handleChange, handleSubmit, ref, disableButton } =
     useViewModel();
 
-  console.log("disableButton => ", disableButton);
-
   return (
     <Section>
       <div className="w-full max-w-6xl mx-auto">
@@ -67,6 +65,7 @@ function ContactSection() {
             </form>
             <div className="relative basis-1/2 overflow-hidden">
               <Image
+                placeholder="blur"
                 src={contact}
                 alt="contact"
                 fill

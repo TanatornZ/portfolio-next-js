@@ -23,6 +23,7 @@ function ProjectSection() {
             >
               <Image
                 src={project.image}
+                placeholder="blur"
                 fill
                 alt="profile"
                 className="rounded-lg"

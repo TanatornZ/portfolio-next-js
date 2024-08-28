@@ -38,6 +38,7 @@ function HomeSection() {
         <div className="flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-5 z-50">
           <div className="size-52 rounded-full relative shadow-lg image opacity-0">
             <Image
+              placeholder="blur"
               src={profile}
               fill
               alt="profile"

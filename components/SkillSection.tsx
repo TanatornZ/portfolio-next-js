@@ -122,6 +122,7 @@ function SkillSection({}: Props) {
               >
                 <div className={cx("w-10 md:w-14 h-10 md:h-14 relative")}>
                   <Image
+                    placeholder="blur"
                     src={skill.image}
                     fill
                     objectFit="cover"
