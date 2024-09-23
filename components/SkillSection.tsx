@@ -51,6 +51,7 @@ function SkillSection({}: Props) {
         <div className="w-full py-8 md:py-12">
           <Bar
             options={{
+              maintainAspectRatio: false,
               plugins: {
                 legend: { display: false },
                 tooltip: {
@@ -92,11 +93,12 @@ function SkillSection({}: Props) {
                 },
               },
             }}
+            className="!h-[250px] md:!h-[350px] lg:!h-[450px]"
             data={{
               labels: ["HTML", "CSS", "JS", "TS", "ReactJs", "NextJs"],
               datasets: [
                 {
-                  data: [2, 2, 3, 3, 4, 3],
+                  data: [2, 3, 3, 3, 4, 3],
                   borderWidth: 1,
                   backgroundColor: [
                     "rgba(252,73,10,0.9)",
