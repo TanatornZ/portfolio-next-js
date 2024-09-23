@@ -18,8 +18,10 @@ function useViewModel() {
   });
 
   const [disableButton, setDisableButton] = useState(true);
+
   useEffect(() => {
     if (!ref.current) return;
+    console.log("ref.current => ", ref.current);
     setDisableButton(!ref.current?.checkValidity());
   }, [formData]);
 

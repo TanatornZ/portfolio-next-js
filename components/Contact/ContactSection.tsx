@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import Section from "../Section";
 import { cx } from "@emotion/css";
-import contact from "@assets/image/contact.jpg";
+import contact from "@assets/image/contact.png";
 import Image from "next/image";
 import useViewModel from "./viewModel";
 
@@ -19,9 +19,9 @@ function ContactSection() {
             Let&apos;s Work Together
           </h1>
 
-          <div className="lg:flex lg:justify-between lg:gap-8 mt-8 md:mt-12">
+          <div className="md:flex md:justify-between lg:gap-8 mt-8 md:mt-12">
             <form
-              className="space-y-4 lg:basis-1/2"
+              className="space-y-4 basis-1/2"
               action={handleSubmit}
               ref={ref}
             >
@@ -42,7 +42,7 @@ function ContactSection() {
                 onChange={handleChange}
               />
               <Input
-                type="text"
+                type="textArea"
                 name="message"
                 placeholder="Message"
                 label="Message"
@@ -54,8 +54,8 @@ function ContactSection() {
                   className={cx(
                     "py-3 px-4 rounded-md font-semibold transition-all w-full md:max-w-[300px]",
                     disableButton
-                      ? "bg-blue-200 cursor-not-allowed text-blue-400"
-                      : "bg-blue-500 hover:bg-blue-600 hover:rounded-tl-[24px] hover:rounded-br-[24px] text-blue-950 "
+                      ? "bg-blue-200 cursor-not-allowed text-slate-100"
+                      : "bg-blue-500 hover:bg-blue-600 hover:rounded-tl-[24px] hover:rounded-br-[24px] text-white"
                   )}
                   type={disableButton ? "button" : "submit"}
                 >
@@ -65,13 +65,12 @@ function ContactSection() {
             </form>
             <div className="relative basis-1/2 overflow-hidden">
               <Image
-                placeholder="blur"
                 src={contact}
                 alt="contact"
                 fill
                 sizes="50vw"
                 quality={100}
-                className="object-cover scale-125 object-bottom"
+                className="object-contain"
               />
             </div>
           </div>
@@ -96,7 +95,7 @@ const Input = ({
   name: string;
   type: string;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: any) => void;
   placeholder: string;
   className?: string;
 }) => {
@@ -104,19 +103,34 @@ const Input = ({
     <div>
       <label className="block text font-semibold text-gray-900">{label}</label>
       <div className="mt-2">
-        <input
-          id={name}
-          name={name}
-          type={type}
-          value={value}
-          placeholder={placeholder}
-          onChange={onChange}
-          required
-          className={cx(
-            "block w-full rounded-md border-0 p-3 md:p-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm ",
-            className
-          )}
-        />
+        {type != "textArea" ? (
+          <input
+            id={name}
+            name={name}
+            type={type}
+            value={value}
+            placeholder={placeholder}
+            onChange={onChange}
+            required
+            className={cx(
+              "block w-full rounded-md border-0 p-3 md:p-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm ",
+              className
+            )}
+          />
+        ) : (
+          <textarea
+            id={name}
+            name={name}
+            value={value}
+            placeholder={placeholder}
+            onChange={onChange}
+            required
+            className={cx(
+              "block w-full rounded-md border-0 p-3 md:p-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm ",
+              className
+            )}
+          ></textarea>
+        )}
       </div>
     </div>
   );
