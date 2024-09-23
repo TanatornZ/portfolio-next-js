@@ -43,7 +43,7 @@ function SkillSection({}: Props) {
   ];
 
   return (
-    <Section>
+    <Section className="bg-slate-100">
       <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold text-center text-slate-800">
           Main Skill
@@ -121,16 +121,9 @@ function SkillSection({}: Props) {
                 key={`skill-order-${index}`}
               >
                 <div className={cx("w-10 md:w-14 h-10 md:h-14 relative")}>
-                  <Image
-                    placeholder="blur"
-                    src={skill.image}
-                    fill
-                    objectFit="cover"
-                    objectPosition="center"
-                    alt={`skill-order-${index}`}
-                  />
+                  <Image src={skill.image} fill alt={`skill-order-${index}`} />
                 </div>
-                <p className="mt-2 text-sm">{skill.name}</p>
+                <p className="mt-2 text-sm font-medium">{skill.name}</p>
               </div>
             ))}
           </div>

@@ -50,8 +50,8 @@ function HomeSection() {
             <h1 className="text-slate-900 font-semibold md:text-3xl">
               Tanatorn Intaphong
             </h1>
-            <p className="text-slate-600 text-sm md:text-lg">
-              Front-end Developer
+            <p className="text-slate-600 text-sm md:text-lg font-medium">
+              Software Engineer
             </p>
           </div>
         </div>
