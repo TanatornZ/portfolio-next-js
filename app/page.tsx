@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="font-mono">
+    <div className="font-montserrat">
       <div>
         <Toaster />
       </div>

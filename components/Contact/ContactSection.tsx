@@ -19,7 +19,7 @@ function ContactSection() {
             Let&apos;s Work Together
           </h1>
 
-          <div className="lg:flex lg:justify-between lg:gap-8 mt-4 md:mt-8">
+          <div className="lg:flex lg:justify-between lg:gap-8 mt-8 md:mt-12">
             <form
               className="space-y-4 lg:basis-1/2"
               action={handleSubmit}
@@ -52,10 +52,10 @@ function ContactSection() {
               <div className="w-full flex justify-center  md:mt-4">
                 <button
                   className={cx(
-                    "py-3 px-4 rounded-md font-semibold text-white  transition-all w-full md:max-w-[300px]",
+                    "py-3 px-4 rounded-md font-semibold transition-all w-full md:max-w-[300px]",
                     disableButton
-                      ? "bg-slate-400 cursor-not-allowed"
-                      : "bg-blue-500 hover:bg-blue-600 hover:rounded-tl-[24px] hover:rounded-br-[24px]"
+                      ? "bg-blue-200 cursor-not-allowed text-blue-400"
+                      : "bg-blue-500 hover:bg-blue-600 hover:rounded-tl-[24px] hover:rounded-br-[24px] text-blue-950 "
                   )}
                   type={disableButton ? "button" : "submit"}
                 >
