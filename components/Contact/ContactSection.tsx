@@ -1,26 +1,27 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useMemo } from "react";
 import Section from "../Section";
 import { cx } from "@emotion/css";
 import Lottie from "react-lottie";
 import * as animationData from "@assets/programmer_lottie.json";
-
 import useViewModel from "./viewModel";
 
 function ContactSection() {
   const { formData, handleChange, handleSubmit, ref, disableButton } =
     useViewModel();
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  const defaultOptions = useMemo(() => {
+    return {
+      loop: true,
+      autoplay: true,
+      animationData: animationData,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
+    };
+  }, []);
   return (
-    <Section>
+    <Section id="contact-section">
       <div className="w-full max-w-6xl mx-auto">
         <div className="">
           <h1 className="text-center text-2xl md:text-4xl font-semibold">

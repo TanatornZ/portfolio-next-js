@@ -43,7 +43,7 @@ function SkillSection({}: Props) {
   ];
 
   return (
-    <Section className="bg-slate-100">
+    <Section id="skill-section" className="bg-slate-100">
       <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold text-center text-slate-800">
           Main Skill
