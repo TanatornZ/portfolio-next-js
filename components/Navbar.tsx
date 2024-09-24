@@ -7,6 +7,8 @@ import { HiBars3 } from "react-icons/hi2";
 
 function Navbar() {
   const [isOpenNavbar, setIsOpenNavbar] = useState(false);
+
+  console.log("isOpenNavbar => ", isOpenNavbar);
   return (
     <div>
       <div className="h-16 md:px-16 px-4 shadow-md bg-slate-50 w-full fixed z-50 flex items-center font-montserrat">
@@ -39,28 +41,20 @@ function Navbar() {
             onClick={() => setIsOpenNavbar(!isOpenNavbar)}
           >
             {isOpenNavbar ? (
-              <>
-                <FaXmark className="size-6" />
-              </>
+              <FaXmark className="size-6" />
             ) : (
-              <>
-                <HiBars3 className="size-6 md:hidden" />
-              </>
+              <HiBars3 className="size-6 md:hidden" />
             )}
           </div>
         </div>
       </div>
       <div
-        className={`z-40 fixed w-full bg-slate-50 translate-y-16 transition-all font-montserrat ${
-          isOpenNavbar ? "translate-y-16" : "-translate-y-48"
+        className={`z-40 fixed w-full bg-slate-50 translate-y-16 transition-all duration-300 font-montserrat ${
+          isOpenNavbar ? "top-0" : "-top-64"
         }`}
       >
         <div className="gap-8 py-6 font-medium flex flex-col justify-center text-center w-full z-50">
-          <Link
-            href="#home-section"
-            className="hover:underline"
-            onClick={() => setIsOpenNavbar(false)}
-          >
+          <Link href="#home-section" className="hover:underline">
             About Me
           </Link>
           <Link href="#project-section" className="hover:underline">
