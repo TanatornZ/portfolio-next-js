@@ -64,7 +64,7 @@ function useViewModel() {
     });
 
     toast.promise(sendContact, {
-      loading: "Saving...",
+      loading: "Sending...",
       success: <b>Contact Sended.</b>,
       error: <b>Contact not Sended.</b>,
     });

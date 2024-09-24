@@ -60,7 +60,7 @@ function SkillSection({}: Props) {
                       const value = chart.formattedValue as unknown as number;
                       switch (Number(value)) {
                         case 1:
-                          return "Beginner";
+                          return "Junior";
                         case 2:
                           return "Average";
                         case 3:
