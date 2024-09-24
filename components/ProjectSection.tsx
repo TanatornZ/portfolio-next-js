@@ -7,7 +7,7 @@ import Section from "./Section";
 
 function ProjectSection() {
   return (
-    <Section className="bg-slate-50">
+    <Section id="project-section" className="bg-slate-50">
       <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold text-center text-slate-800">
           Project

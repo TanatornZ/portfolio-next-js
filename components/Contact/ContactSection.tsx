@@ -1,25 +1,34 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useMemo } from "react";
 import Section from "../Section";
 import { cx } from "@emotion/css";
-import contact from "@assets/image/contact.png";
-import Image from "next/image";
+import Lottie from "react-lottie";
+import * as animationData from "@assets/programmer_lottie.json";
 import useViewModel from "./viewModel";
 
 function ContactSection() {
   const { formData, handleChange, handleSubmit, ref, disableButton } =
     useViewModel();
-
+  const defaultOptions = useMemo(() => {
+    return {
+      loop: true,
+      autoplay: true,
+      animationData: animationData,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
+    };
+  }, []);
   return (
-    <Section>
+    <Section id="contact-section">
       <div className="w-full max-w-6xl mx-auto">
         <div className="">
           <h1 className="text-center text-2xl md:text-4xl font-semibold">
             Let&apos;s Work Together
           </h1>
 
-          <div className="md:flex md:justify-between lg:gap-8 mt-8 md:mt-12">
+          <div className="md:flex md:justify-between md:items-center lg:gap-8 mt-8 md:mt-12">
             <form
               className="space-y-4 basis-1/2"
               action={handleSubmit}
@@ -63,15 +72,8 @@ function ContactSection() {
                 </button>
               </div>
             </form>
-            <div className="relative basis-1/2 overflow-hidden">
-              <Image
-                src={contact}
-                alt="contact"
-                fill
-                sizes="50vw"
-                quality={100}
-                className="object-contain"
-              />
+            <div className="hidden md:block mx-auto">
+              <Lottie options={defaultOptions} height={300} width={300} />
             </div>
           </div>
         </div>
