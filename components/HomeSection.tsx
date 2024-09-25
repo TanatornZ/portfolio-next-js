@@ -49,7 +49,7 @@ function HomeSection() {
               style={{ objectFit: "cover", objectPosition: "center" }}
             ></Image>
           </div>
-          <div className="flex flex-col justify-center items-center rounded-lg p-3 md:p-4 gap-2 backdrop-blur-md bg-white shadow-lg box opacity-0 z-30">
+          <div className="flex flex-col justify-center items-center rounded-lg p-3 md:p-4 gap-2 bg-white shadow-lg box opacity-0 z-30">
             <h1 className="text-slate-900 font-semibold md:text-3xl">
               Tanatorn Intapong
             </h1>
@@ -57,7 +57,7 @@ function HomeSection() {
               Software Engineer
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center rounded-lg p-3 md:p-4 gap-2 backdrop-blur-md bg-white shadow-lg box opacity-0 z-30">
+          <div className="flex flex-col justify-center items-center rounded-lg p-3 md:p-4 gap-2  bg-white shadow-lg box opacity-0 z-30">
             <p className="text-slate-600 text-sm md:text-lg font-medium indent-6">
               I’m a dedicated software engineer with hands-on experience in web
               technologies since 2020. Throughout my journey, I’ve been focused

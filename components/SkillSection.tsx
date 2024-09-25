@@ -78,7 +78,7 @@ function SkillSection({}: Props) {
                     callback: function (value) {
                       switch (value) {
                         case 1:
-                          return "Beginner 🐣";
+                          return "Junior 🐣";
                         case 2:
                           return "Average 😁";
                         case 3:
