@@ -28,7 +28,7 @@ function ContactSection() {
             Let&apos;s Work Together
           </h1>
 
-          <div className="md:flex md:justify-between md:items-center lg:gap-8 mt-8 md:mt-12">
+          <div className="md:flex md:justify-between md:items-start lg:gap-8 mt-8 md:mt-12">
             <form
               className="space-y-4 basis-1/2"
               action={handleSubmit}
@@ -128,7 +128,7 @@ const Input = ({
             onChange={onChange}
             required
             className={cx(
-              "block w-full rounded-md border-0 p-3 md:p-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm ",
+              "block w-full rounded-md border-0 p-3 md:p-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  min-h-20 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm ",
               className
             )}
           ></textarea>
