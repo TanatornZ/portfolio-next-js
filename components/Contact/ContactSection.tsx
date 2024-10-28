@@ -10,6 +10,7 @@ import useViewModel from "./viewModel";
 function ContactSection() {
   const { formData, handleChange, handleSubmit, ref, disableButton } =
     useViewModel();
+
   const defaultOptions = useMemo(() => {
     return {
       loop: true,
@@ -20,6 +21,7 @@ function ContactSection() {
       },
     };
   }, []);
+
   return (
     <Section id="contact-section">
       <div className="w-full max-w-6xl mx-auto">
@@ -55,6 +57,7 @@ function ContactSection() {
                 name="message"
                 placeholder="Message"
                 label="Message"
+                className="max-h-[160px]"
                 value={formData.message}
                 onChange={handleChange}
               />
@@ -72,8 +75,14 @@ function ContactSection() {
                 </button>
               </div>
             </form>
-            <div className="hidden md:block mx-auto">
-              <Lottie options={defaultOptions} height={300} width={300} />
+            <div className="hidden md:block mx-auto !cursor-default">
+              <Lottie
+                style={{ cursor: "default" }}
+                options={defaultOptions}
+                isClickToPauseDisabled={true}
+                height={300}
+                width={300}
+              />
             </div>
           </div>
         </div>

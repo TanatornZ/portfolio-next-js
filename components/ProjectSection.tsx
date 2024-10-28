@@ -7,12 +7,12 @@ import Section from "./Section";
 
 function ProjectSection() {
   return (
-    <Section id="project-section" className="bg-slate-50">
+    <Section id="project-section" className="bg-gray-50">
       <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold text-center text-slate-800">
           Project
         </h1>
-        <div className="mt-4 md:mt-8 grid gap-3 md:gap-6 md:grid-cols-2 lg:grid-cols-3 w-full">
+        <div className="my-4 md:my-8 lg:my-12 grid gap-3 md:gap-6 md:grid-cols-2 lg:grid-cols-3 w-full">
           {projectList.map((project) => (
             <div
               key={project.id}
@@ -37,7 +37,7 @@ function ProjectSection() {
           ))}
         </div>
         <button
-          className="py-3 px-4 rounded-md al bg-blue-500 hover:bg-blue-600 mt-4 font-semibold text-white hover:rounded-tl-[24px] hover:rounded-br-[24px] transition-all"
+          className="py-3 px-4 rounded-md font-semibold bg-blue-500 hover:bg-blue-600font-semibold text-white hover:rounded-tl-[24px] hover:rounded-br-[24px] transition-all"
           onClick={() => {
             window.open("https://github.com/TanatornZ");
           }}

@@ -13,7 +13,7 @@ function Navbar() {
       <div className="h-16 md:px-16 px-4 shadow-md bg-slate-50 w-full fixed z-50 flex items-center font-montserrat">
         <div className="max-w-6xl w-full flex mx-auto justify-between items-center">
           <h1 className="font-semibold text-xl">TANATORN</h1>
-          <ul className="gap-4 font-medium hidden md:flex">
+          <ul className="gap-4 lg:gap-8 font-medium hidden md:flex">
             <li>
               <Link href="#home-section" className="hover:underline">
                 About Me

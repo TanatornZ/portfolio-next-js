@@ -115,8 +115,10 @@ function SkillSection({}: Props) {
           />
         </div>
         <div className="mx-auto md:mt-8">
-          <h3 className="text-center text-2xl font-semibold">Other Skill</h3>
-          <div className="flex gap-4 md:gap-12 mt-4 md:mt-8">
+          <h3 className="text-center text-2xl lg:text-3xl font-semibold">
+            Other Skill
+          </h3>
+          <div className="flex gap-4 md:gap-12 mt-4 md:mt-8 lg:mt-12">
             {otherSkills.map((skill, index) => (
               <div
                 className="flex flex-col gap-2 items-center"
