@@ -38,7 +38,7 @@ function HomeSection() {
       className="min-h-dvh bg-slate-100 flex justify-center items-center"
     >
       <div ref={container} className="pt-16">
-        <div className="flex flex-col items-center mx-auto gap-5 z-30 w-3/4 max-w-5xl">
+        <div className="flex flex-col items-center mx-auto gap-5 z-30 max-w-5xl">
           <div className="size-52 rounded-full relative shadow-lg image opacity-0 z-30">
             <Image
               placeholder="blur"
@@ -49,8 +49,8 @@ function HomeSection() {
               style={{ objectFit: "cover", objectPosition: "center" }}
             ></Image>
           </div>
-          <div className="flex flex-col justify-center items-center rounded-lg p-3 md:p-4 gap-2 bg-white shadow-lg box opacity-0 z-30">
-            <h1 className="text-slate-900 font-semibold md:text-3xl">
+          <div className="flex flex-col  justify-center items-center rounded-lg p-3 md:p-4 gap-2 bg-white shadow-lg box opacity-0 z-30">
+            <h1 className="text-slate-900  inline-block font-semibold md:text-3xl">
               Tanatorn Intapong
             </h1>
             <p className="text-slate-600 text-sm md:text-lg font-medium">
@@ -59,12 +59,11 @@ function HomeSection() {
           </div>
           <div className="flex flex-col justify-center items-center rounded-lg p-3 md:p-4 gap-2  bg-white shadow-lg box opacity-0 z-30">
             <p className="text-slate-600 text-sm md:text-lg font-medium indent-6">
-              I’m a dedicated software engineer with hands-on experience in web
-              technologies since 2020. Throughout my journey, I’ve been focused
-              on building meaningful and impactful software that makes a
-              difference. I’m always excited to collaborate with like-minded
-              professionals to create solutions that benefit others. Let’s build
-              something great together!
+              I am a dedicated software engineer specializing in full-stack
+              development since 2020. Passionate about building impactful
+              software solutions that drive meaningful change, I excel at
+              collaborating with cross-functional teams to deliver results that
+              align with and enhance business objectives.
             </p>
           </div>
         </div>
