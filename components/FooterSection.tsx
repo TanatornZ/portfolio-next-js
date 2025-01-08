@@ -27,7 +27,7 @@ function FooterSection({}: Props) {
               icon={<FaLinkedin size={24} style={{ color: "0F66C2" }} />}
               onClick={() =>
                 window.open(
-                  "https://www.linkedin.com/in/tanatorn-Intapong-a3832a254/"
+                  "https://linkedin.com/in/tanatorn-intaphong-a3832a254"
                 )
               }
             />
