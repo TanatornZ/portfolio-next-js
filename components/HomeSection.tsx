@@ -53,7 +53,7 @@ function HomeSection() {
             <h1 className="text-slate-900  inline-block font-semibold md:text-3xl">
               Tanatorn Intapong
             </h1>
-            <p className="text-slate-600 text-sm md:text-lg font-medium">
+            <p className="text-slate-600 text-sm md:text-lg font-medium anim-typewriter text-center">
               Software Engineer
             </p>
           </div>

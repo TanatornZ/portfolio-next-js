@@ -17,6 +17,8 @@ import {
 import { cx } from "@emotion/css";
 import flutter from "@assets/icons/flutter.webp";
 import mongoDB from "@assets/icons/mongodb.svg";
+import express from "@assets/icons/Expressjs.webp";
+import postgres from "@assets/icons/postgres.png";
 import nestJs from "@assets/icons/nestJs.png";
 import Image, { StaticImageData } from "next/image";
 import Section from "./Section";
@@ -37,8 +39,10 @@ function SkillSection({}: Props) {
   );
 
   const otherSkills: { name: string; image: StaticImageData }[] = [
+    { name: "Express Js", image: express },
     { name: "Nest Js", image: nestJs },
     { name: "Mongo DB", image: mongoDB },
+    { name: "PostgreSQL", image: postgres },
     { name: "Flutter", image: flutter },
   ];
 
@@ -124,8 +128,8 @@ function SkillSection({}: Props) {
                 className="flex flex-col gap-2 items-center"
                 key={`skill-order-${index}`}
               >
-                <div className={cx("w-10 md:w-14 h-10 md:h-14 relative")}>
-                  <Image src={skill.image} fill alt={`skill-order-${index}`} />
+                <div className={cx("w-8 md:w-10 h-8 md:h-10 relative")}>
+                  <Image src={skill.image} alt={`skill-order-${index}`} />
                 </div>
                 <p className="mt-2 text-sm font-medium">{skill.name}</p>
               </div>
