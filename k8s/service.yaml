@@ -4,6 +4,7 @@ metadata:
   name: portfolio
   namespace: default
 spec:
+  type: LoadBalancer
   selector:
     app: portfolio
   type: NodePort
