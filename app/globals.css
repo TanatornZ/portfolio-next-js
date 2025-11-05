@@ -101,6 +101,7 @@ body {
   animation: 
     typing 5s steps(17, end),
     blink-caret .75s step-end infinite;
+  animation-delay: 1.4s;
 }
 
 /* The typing effect */
