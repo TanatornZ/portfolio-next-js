@@ -1,6 +1,6 @@
 import halloween from "@assets/image/projects/halloween.png";
 import NFT from "@assets/image/projects/NFT.png";
-import calculator from "@assets/image/projects/calculator.png";
+import Kampangphet from "@assets/image/projects/wihan-sean.png";
 import { StaticImageData } from "next/image";
 
 type IProjectList = {
@@ -20,12 +20,12 @@ export const projectList: IProjectList[] = [
     url: "https://starlit-scone-55779c.netlify.app",
   },
   {
-    id: "Calculator",
-    title: "Calculator PWA",
+    id: "wi-han-sian",
+    title: "Wi Han Sian Kamphangphet",
     description:
-      "calculator website is website for practices front-end development and progressive web application",
-    image: calculator,
-    url: "https://inquisitive-sprite-d838e5.netlify.app",
+      "Wi Han Sian Kampangphet is website for show list of sculpture in wi han sian Kamphaengphet combine with feature text to speech to read sculpture information (Thai language)",
+    image: Kampangphet,
+    url: "https://wi-han-sian-kamphaengphet.vercel.app/",
   },
   {
     id: "NFT Website",

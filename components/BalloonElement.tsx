@@ -23,7 +23,7 @@ function BalloonElement({
         bottom: bottom != 0 ? `${bottom}%` : "",
         zIndex: zIndex != 0 ? `${zIndex}` : "",
       }}
-      className={cx("rounded-full absolute z-10", color, className)}
+      className={cx("rounded-full absolute z-10 opacity-40 blur-sm shadow-sm", color, className)}
     ></div>
   );
 }

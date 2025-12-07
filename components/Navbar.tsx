@@ -29,11 +29,11 @@ function Navbar() {
                 Skill
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="#contact-section" className="hover:underline">
                 Contact
               </Link>
-            </li>
+            </li> */}
           </ul>
           <div
             className=" md:hidden"
